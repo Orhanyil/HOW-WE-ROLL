@@ -35,3 +35,35 @@ nav { /* Navigation box */
 .nav-menu li {
     list-style: none; /* removes bullet points of list*/
 }
+
+
+#fontColor {
+    color: rgb(225, 227, 245);
+    flex-grow: 10;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    font-size: large;
+    
+}
+#margin {
+    margin-bottom: 20px;
+}
+
+.ranger {
+    -webkit-appearance: none;
+    width: 25%;
+    height: 15px;
+    border-radius: 10px;  
+    background: #ee0524;
+    outline: none;
+    align-items: center;
+   
+}
+
+.right {
+    text-align: right;
+  }
+  .left{
+    text-align: left;
+  }
