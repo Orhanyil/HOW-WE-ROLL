@@ -55,9 +55,11 @@ nav { /* Navigation box */
     width: 25%;
     height: 15px;
     border-radius: 10px;  
-    background: #ee0524;
+    background: #1805ee;
     outline: none;
     align-items: center;
+    /*endret til blå*/
+
    
 }
 
