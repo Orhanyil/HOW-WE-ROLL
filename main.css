@@ -69,3 +69,22 @@ nav { /* Navigation box */
   .left{
     text-align: left;
   }
+
+  .button {
+    color: rgb(0, 0, 0);
+    width: 100px;
+    height: 40px;
+    background-color: rgb(59, 7, 104);
+    border-width: 3px;
+    border-color: rgb(160, 24, 24);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    padding: 5px;
+    margin: 5px;
+    height: min-content;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: aliceblue;
+  }
