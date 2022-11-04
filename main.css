@@ -56,21 +56,13 @@ nav { /* Navigation box */
     height: 15px;
     border-radius: 10px;  
     background: #1805ee;
-    outline: none;
     align-items: center;
     /*endret til blå*/
 
    
 }
 
-.right {
-    text-align: right;
-  }
-  .left{
-    text-align: left;
-  }
-
-  .button {
+.button {
     color: rgb(0, 0, 0);
     width: 100px;
     height: 40px;
