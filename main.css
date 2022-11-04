@@ -35,9 +35,11 @@ nav { /* Navigation box */
 .nav-menu li {
     list-style: none; /* removes bullet points of list*/
 }
+#innhold {
+    margin-top: 50px;
+}
 
-
-#fontColor {
+.fontColor {
     color: rgb(225, 227, 245);
     flex-grow: 10;
     text-align: center;
@@ -46,20 +48,22 @@ nav { /* Navigation box */
     font-size: large;
     
 }
-#margin {
+.nameMargin {
     margin-bottom: 20px;
+}
+#center { /* Centers ranger and text for the form*/
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ranger {
     -webkit-appearance: none;
-    width: 25%;
+    width: 400px;
     height: 15px;
     border-radius: 10px;  
     background: #1805ee;
     align-items: center;
-    /*endret til blå*/
-
-   
+    margin: 15px;
 }
 
 .button {
