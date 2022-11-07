@@ -83,4 +83,15 @@ nav { /* Navigation box */
     margin-bottom: 20px;
     cursor: pointer;
     color: aliceblue;
+
+    
+  }
+
+  #Form {
+    color: rgb(225, 227, 245);
+    flex-grow: 10;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    font-size: large;
   }
