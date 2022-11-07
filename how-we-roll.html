@@ -132,7 +132,7 @@ async function postData(url = "", data = {}) {
         return response.json(); // parses JSON response into native JavaScriptobjects
       }
 
-      function handleSubmit(event) {
+      function formData(event) {
         event.preventDefault();
         const data = new FormData(event.target);
         const formJSON = Object.fromEntries(data.entries());
@@ -142,7 +142,7 @@ async function postData(url = "", data = {}) {
         });
       }
       const form = document.querySelector("form");
-      form.addEventListener("submit", handleSubmit);
+      form.addEventListener("submit", formData);
     </script>
 </script>
 
