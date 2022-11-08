@@ -95,3 +95,17 @@ nav { /* Navigation box */
     position: relative;
     font-size: large;
   }
+
+  .canvas {
+    border-style: solid;
+    border-color: aliceblue;
+    padding: 30px 30px;
+    text-align: center;
+    margin: 0;
+    margin-top: 100px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 350px;
+  }
+
+
