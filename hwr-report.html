@@ -23,17 +23,18 @@
 </nav>
 
 <div>
-    <canvas id= resultat class="canvas" width="800" height="700"></canvas>
+    <!--Skjema-data presentert i canvas-API-->
+    <canvas 
+        id= resultat 
+        class="canvas" 
+        width="800" height="700">
+    </canvas>
 </div>
     
 <script>  
     //Canvas
     let resultat = document.getElementById('resultat');
     let context = canvas.getContext('2d');
-    
-    resultat.width = 800;
-    resultat.height = 700;
-
 
     //Form data
     //person 1
