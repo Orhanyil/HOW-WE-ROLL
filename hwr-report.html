@@ -1,84 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css" />
     <title>Rapport - How We Roll</title>
+
 </head>
+
 <body>
 
-<nav>
-    <div class="logo"> 
-        <a href="index.html"><h3>HOW WE ROLL - GRUPPE 12 B</h3></a>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <h3>HOW WE ROLL - GRUPPE 12 B</h3>
+            </a>
+        </div>
+        <ul class="nav-menu">
+            <li> <a href="index.html">Hjem</a> </li>
+
+            <li> <a href="hwr-form.html">HWR Skjema</a> </li>
+
+            <li> <a href="hwr-report.html">HWR Report</a> </li>
+        </ul>
+    </nav>
+
+    <div>
+        <!--Skjema-data presentert i canvas-API-->
+        <canvas id=resultat class="canvas" width="800" height="700">
+        </canvas>
     </div>
-    <ul class="nav-menu">
-        <li> <a href="index.html">Hjem</a> </li>
 
-        <li> <a href="hwr-form.html">HWR Skjema</a> </li>
+    <script>
+        //id=resultat
+        let resultat = document.getElementById('resultat');
+        let context = resultat.getContext('2d');
 
-        <li> <a href="hwr-report.html">HWR Report</a> </li>
-    </ul>
-</nav>
+        //Form data
+        //person 1
+        async function getData() {
+            const response = await fetch(
+                "https://bacit.info/hwr/20221109072557-0c5c01fc160602a674cfd99ae8f36939.json"
+            );
+            const data = await response.json();
+            console.log(data);
+            const display = `<canvas>${data?.DigitalOrPhysical}</canvas>`;
+            document
+                .getElementById("resultat")
+                .insertAdjacentHTML("beforeend", display);
+        }
+        getData();
 
-<div>
-    <!--Skjema-data presentert i canvas-API-->
-    <canvas 
-        id= resultat 
-        class="canvas" 
-        width="800" height="700">
-    </canvas>
-</div>
-    
-<script>  
-    //Canvas
-    let resultat = document.getElementById('resultat');
-    let context = canvas.getContext('2d');
-
-    //Form data
-    //person 1 (Orhan)
-    fetch('https://bacit.info/hwr/20221109072557-0c5c01fc160602a674cfd99ae8f36939.json')
-    .then(response => response.json())
-    .then(test => console.log(response));
-
-
-
-    //person 2
-    fetch('https://bacit.info/hwr/JSON.FIL')
-    .then(response => response.json())
-    .then(data => console.log(data));
-
-
-
-    //person 3
-    fetch('https://bacit.info/hwr/JSON.FIL')
-    .then(response => response.json())
-    .then(data => console.log(data));
+        context.font = '14px serif';
+        context.fillText(resultat.fname, 20, 20);
+        context.fillText(resultat.lname, 100, 20);
+        context.fillStyle = 'Red';
+        context.fillText("Early bird", 20, 50);
+        context.fillText('Work on together', 20, 100);
+        context.fillText('Tell me the backstory', 20, 150);
+        context.fillText('Need to talk it out', 20, 200);
+        context.fillText('Verbal processor', 20, 250);
+        context.fillText('Schedule a time to chat', 20, 300);
+        context.fillText('Video chat', 20, 350);
+        context.fillText('09-17 hours', 20, 400);
+        context.fillText('Visual learner', 20, 450);
+        context.fillText('Digital meeting', 20, 500);
+        context.fillText('Programming', 20, 550);
 
 
 
-    //person 4
-    fetch('https://bacit.info/hwr/JSON.FIL')
-    .then(response => response.json())
-    .then(data => console.log(data));
+
+
+        context.beginPath();
+        context.moveTo(200, 50);
+        context.lineTo(600, 50);
+
+        context.moveTo(200, 100);
+        context.lineTo(600, 100);
+
+        context.moveTo(200, 150);
+        context.lineTo(600, 150);
+
+        context.moveTo(200, 200);
+        context.lineTo(600, 200);
+
+        context.moveTo(200, 250);
+        context.lineTo(600, 250);
+
+        context.moveTo(200, 300);
+        context.lineTo(600, 300);
+
+        context.moveTo(200, 350);
+        context.lineTo(600, 350);
+
+        context.moveTo(200, 400);
+        context.lineTo(600, 400);
+
+        context.moveTo(200, 450);
+        context.lineTo(600, 450);
+
+        context.moveTo(200, 500);
+        context.lineTo(600, 500);
+
+        context.moveTo(200, 550);
+        context.lineTo(600, 550);
+        context.stroke();
+
+        context.font = '18px serif';
+        context.fillStyle = "white";
+        context.fillStyle = 'Red';
+        context.fillText("Night owl", 620, 50);
+        context.fillText('Go off alone and think', 620, 100);
+        context.fillText('Cut to the chase', 620, 150);
+        context.fillText('Need to move on', 620, 200);
+        context.fillText('Mental processor', 620, 250);
+        context.fillText('Interrupt me when you need me', 620, 300);
+        context.fillText('Slack/Text', 620, 350);
+        context.fillText('I have no set schedule', 620, 400);
+        context.fillText('Auditory learner', 620, 450);
+        context.fillText('Physical meeting', 620, 500);
+        context.fillText('Project Planning', 620, 550);
 
 
 
-    //person 5
-    fetch('https://bacit.info/hwr/JSON.FIL')
-    .then(response => response.json())
-    .then(data => console.log(data));
 
 
-    
-    //person 6
-    fetch('https://bacit.info/hwr/JSON.FIL')
-    .then(response => response.json())
-    .then(data => console.log(data));
 
-    
 
-</script>
+
+        /*
+                const getData = async() => {
+                    await fetch('https://bacit.info/hwr/20221109072557-0c5c01fc160602a674cfd99ae8f36939.json')
+                        .then(response => console.log(response))
+                        .catch(response => console.log(response));
+                }
+        */
+
+        /*
+            //person 2
+            fetch('https://bacit.info/hwr/JSON.FIL')
+            .then(response => response.json())
+            .then(data => console.log(data));
+        
+        
+        
+            //person 3
+            fetch('https://bacit.info/hwr/JSON.FIL')
+            .then(response => response.json())
+            .then(data => console.log(data));
+        
+        
+        
+            //person 4
+            fetch('https://bacit.info/hwr/JSON.FIL')
+            .then(response => response.json())
+            .then(data => console.log(data));
+        
+        
+        
+            //person 5
+            fetch('https://bacit.info/hwr/JSON.FIL')
+            .then(response => response.json())
+            .then(data => console.log(data));
+        
+        
+            
+            //person 6
+            fetch('https://bacit.info/hwr/JSON.FIL')
+            .then(response => response.json())
+            .then(data => console.log(data));
+        */
+
+
+    </script>
 </body>
+
 </html>
