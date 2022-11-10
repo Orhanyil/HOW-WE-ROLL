@@ -35,3 +35,75 @@ nav { /* Navigation box */
 .nav-menu li {
     list-style: none; /* removes bullet points of list*/
 }
+#innhold {
+    margin-top: 50px;
+}
+
+.fontColor {
+    color: rgb(225, 227, 245);
+    flex-grow: 10;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    font-size: large;
+    
+}
+.nameMargin {
+    margin-bottom: 20px;
+}
+#center { /* Centers ranger and text for the form*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ranger {
+    -webkit-appearance: none;
+    width: 400px;
+    height: 15px;
+    border-radius: 10px;  
+    background: #1805ee;
+    align-items: center;
+    margin: 15px;
+}
+
+.button {
+    color: rgb(0, 0, 0);
+    width: 100px;
+    height: 40px;
+    background-color: rgb(59, 7, 104);
+    border-width: 3px;
+    border-color: rgb(160, 24, 24);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    padding: 5px;
+    margin: 5px;
+    height: min-content;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: aliceblue;
+    
+  }
+
+  #Form {
+    color: rgb(225, 227, 245);
+    flex-grow: 10;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    font-size: large;
+  }
+
+  .canvas {
+    border-style: solid;
+    border-color: aliceblue;
+    padding: 30px 30px;
+    text-align: center;
+    margin: 0;
+    margin-top: 100px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 350px;
+    background-color: aliceblue;
+}

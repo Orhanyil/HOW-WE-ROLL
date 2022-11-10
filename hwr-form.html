@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" />
+    <title>How We Roll</title>
+</head>
+<body>
+
+<nav>
+    <div class="logo"> 
+        <a href="index.html"><h3>HOW WE ROLL - GRUPPE 12 B</h3></a>
+    </div>
+    <ul class="nav-menu">
+        <li> <a href="index.html">Hjem</a> </li>
+
+        <li> <a href="hwr-form.html">HWR Skjema</a> </li>
+
+        <li> <a href="hwr-report.html">HWR Report</a> </li>
+    </ul>
+</nav>
+<div id="innhold" class="fontColor">
+    <form method="POST">
+        <div id="textContentHolder">
+        <div class="nameMargin">
+            <label for="fname" >Fornavn:</label>
+            <input type="text" id="fname" name="fname" required>
+        </div>
+    
+        <div class="nameMargin">
+            <label for="lname">Etternavn: </label>
+            <input type="text" id="lname" name="lname" required>
+        </div>    
+    
+        <table id="center">
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>    <label for="Early">Early</label>    </td>
+                <td>    <input type="range" id="Early" name= "EarlyNightOwl" class="ranger" min="0" max="100" step="any" />   </td>
+                <td>    <label for="Night owl">Night owl </label>   </td>
+            </tr>
+            <tr>
+                <td>    <label for="WorkOnItTogether">Work on it Together</label>   </td>
+                <td>    <input type="range" id="WorkOnItTogether" name= "TogetherOrAlone" class="ranger" min="0" max="100" step="any" />    </td>
+                <td>    <label for="GoOffAloneAndThink">Go off alone and think</label>  </td>
+            </tr>
+
+            <tr>
+                <td>    <label for="TellMeTheBackstory">Tell me the Backstory</label>   </td>
+                <td>    <input type="range" id="TellMeTheBackstory" name= "TellOrCut" class="ranger" min="0" max="100" step="any" />      </td>
+                <td>    <label for="CutToTheChase">Cut to the chase</label>     </td>
+            </tr>
+            <tr>
+                <td>    <label for="NeedToTalkItOut">Need to talk it out</label>    </td>
+                <td>    <input type="range" id="NeedToTalkItOut" name= "TalkOrMoveOn" class="ranger" min="0" max="100" step="any" /> </td>
+                <td>    <label for="NeedToMoveOn">Need to move on</label> </td>
+            </tr>    
+
+            <tr>            
+                <td>    <label for="VerbalProcessor">Verbal processor</label>   </td>
+                <td>    <input type="range" id="VerbalProcessor" name= "VerbalOrMental" class="ranger" min="0" max="100" step="any" /> </td>
+                <td>    <label for="MentalProcessor">Mental processor</label> </td>
+            </tr>
+            <tr>
+                <td>    <label for="ScheduleATimeToChat">Schedule a time to chat</label>    </td>
+                <td>    <input type="range" id="ScheduleATimeToChat" name= "ScheduleOrInterrupt" class="ranger" min="0" max="100" step="any" /> </td>
+                <td>    <label for="InterruptMeWhenYouNeedMe">Interrupt me when you need me</label> </td>
+            </tr>
+            <tr>
+                <td>    <label for="VideoChat">Videochat</label>    </td>
+                <td>    <input type="range" id="VideoChat" class="ranger" name= "VideoOrText" min="0" max="100" step="any" />   </td>
+                <td>    <label for="SlackText">Slack/Text</label>   </td>
+            </tr>    
+
+            <tr>
+                <td>    <label for="NineSeventeenHours">09-17 hours</label>     </td>
+                <td>    <input type="range" id="NineSeventeenHours" class="ranger" name= "HourOrNoSchedule" min="0" max="100" step="any" />      </td>
+                <td>    <label for="IHaveNoSetSchedule"> I have no set schedule</label>     </td>
+            </tr>
+            <tr>
+                <td>    <label for="VisualLearner">Visual learner</label>   </td>
+                <td>    <input type="range" id="VisualLearner" class="ranger" name= "VisualOrAuditory" min="0" max="100" step="any" />   </td>
+                <td>    <label for="AuditoryLearner">Auditory learner</label>   </td>
+            </tr>
+
+            <tr>
+                <td>    <label for="DigitalMeeting">Digital meeting</label>     </td>
+                <td>    <input type="range" id="DigitalMeeting" class="ranger" name= "DigitalOrPhysical" min="0" max="100" step="any" /> </td>
+                <td>    <label for="PhysicalMeeting">Physical meeting</label>    </td>
+
+            <tr>    
+                <td>    <label for="Programming">Programming</label>    </td>
+                <td>    <input type="range" id="Programming" class="ranger" name= "ProgrammingOrProject" min="0" max="100" step="any" />     </td>
+                <td>    <label for="Project Planning">Project Planning</label>      </td>
+            </tr>
+            
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" id="button" value="Send" class="button"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</div>
+<div id="Form"; class="results">
+<h2>Form Data</h2>
+<pre></pre>
+</div>
+
+
+<script>
+// Hentet fra https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (07-11-2022)
+// Example POST method implementation using fetch:
+async function postData(url = "", data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache,only-if-cached
+          credentials: "same-origin", // include, *same-origin, omit
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer,*no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: JSON.stringify(data), // body data type must match"Content-Type"header
+        });
+        return response.json(); // parses JSON response into native JavaScriptobjects
+      }
+
+      function formData(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const formJSON = Object.fromEntries(data.entries());
+        const results = document.querySelector(".results pre");
+        postData("https://bacit.info/", formJSON).then((data) => {
+          results.innerText = JSON.stringify(data, null, 2);
+        });
+      }
+      const form = document.querySelector("form");
+      form.addEventListener("submit", formData);
+
+</script>
+
+</body>
+</html>
