@@ -147,22 +147,22 @@ nav { /* Navigation box */
 
 .card3{
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
 }
 
 .card4{
     grid-column: 2;
-    grid-row: 2;   
+    grid-row: 3;   
 }
 
 .card5{
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 5;
 }
 
 .card6{
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 5;
 }
 
 .cards{
