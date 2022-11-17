@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css" />
     <title>Rapport - How We Roll</title>
+ 
 
 </head>
 
@@ -31,7 +32,7 @@
 
     <div>
         <!--Skjema-data presentert i canvas-API-->
-        <canvas id=resultat class="canvas" width="800" height="700">
+        <canvas id=resultat class="canvas" width="900" height="700">
         </canvas>
     </div>
 
@@ -40,96 +41,345 @@
         let resultat = document.getElementById('resultat');
         let context = resultat.getContext('2d');
 
+        
         //Form data
-        //person 1
-        async function getData() {
-            const response = await fetch(
-                "https://bacit.info/hwr/20221109072557-0c5c01fc160602a674cfd99ae8f36939.json"
-            );
-            const data = await response.json();
-            console.log(data);
-            const display = `<canvas>${data?.DigitalOrPhysical}</canvas>`;
-            document
-                .getElementById("resultat")
-                .insertAdjacentHTML("beforeend", display);
-        }
-        getData();
+        //Orhan
+        fetch('https://bacit.info/hwr/20221117113012-0ad792b8c001e96b44462ad64750edb7.json')
+        .then(function (resp){
+            return resp.json();
+        })
+        .then (function (result){
+            console.log(result);
 
-        context.font = '18px serif';
-        context.fillText(resultat.fname, 20, 20);
-        context.fillStyle = 'Red';
-        context.fillText("Early bird", 20, 50);
-        context.fillText('Work on together', 20, 100);
-        context.fillText('Tell me the backstory', 20, 150);
-        context.fillText('Need to talk it out', 20, 200);
-        context.fillText('Verbal processor', 20, 250);
-        context.fillText('Schedule a time to chat', 20, 300);
-        context.fillText('Video chat', 20, 350);
-        context.fillText('09-17 hours', 20, 400);
-        context.fillText('Visual learner', 20, 450);
-        context.fillText('Digital meeting', 20, 500);
-        context.fillText('Programming', 20, 550);
+        context.font = '24px serif';
+        context.fillStyle = 'blue'
+        context.fillText(result.fname, 100, 16);
+       
+        context.fillStyle = 'red';
+        context.fillText("Early bird", 20, 70);
+        context.fillText('Work on together', 20, 120);
+        context.fillText('Tell me the backstory', 20, 170);
+        context.fillText('Need to talk it out', 20, 220);
+        context.fillText('Verbal processor', 20, 270);
+        context.fillText('Schedule a time to chat', 20, 320);
+        context.fillText('Video chat', 20, 370);
+        context.fillText('09-17 hours', 20, 420);
+        context.fillText('Visual learner', 20, 470);
+        context.fillText('Digital meeting', 20, 520);
+        context.fillText('Programming', 20, 570);
 
 
 
 
 
         context.beginPath();
-        context.moveTo(200, 50);
-        context.lineTo(600, 50);
+        context.moveTo(300, 70);
+        context.lineTo(700, 70);
 
-        context.moveTo(200, 100);
-        context.lineTo(600, 100);
+        context.moveTo(300, 120);
+        context.lineTo(700, 120);
 
-        context.moveTo(200, 150);
-        context.lineTo(600, 150);
+        context.moveTo(300, 170);
+        context.lineTo(700, 170);
 
-        context.moveTo(200, 200);
-        context.lineTo(600, 200);
+        context.moveTo(300, 220);
+        context.lineTo(700, 220);
 
-        context.moveTo(200, 250);
-        context.lineTo(600, 250);
+        context.moveTo(300, 270);
+        context.lineTo(700, 270);
 
-        context.moveTo(200, 300);
-        context.lineTo(600, 300);
+        context.moveTo(300, 320);
+        context.lineTo(700, 320);
 
-        context.moveTo(200, 350);
-        context.lineTo(600, 350);
+        context.moveTo(300, 370);
+        context.lineTo(700, 370);
 
-        context.moveTo(200, 400);
-        context.lineTo(600, 400);
+        context.moveTo(300, 420);
+        context.lineTo(700, 420);
 
-        context.moveTo(200, 450);
-        context.lineTo(600, 450);
+        context.moveTo(300, 470);
+        context.lineTo(700, 470);
 
-        context.moveTo(200, 500);
-        context.lineTo(600, 500);
+        context.moveTo(300, 520);
+        context.lineTo(700, 520);
 
-        context.moveTo(200, 550);
-        context.lineTo(600, 550);
+        context.moveTo(300, 570);
+        context.lineTo(700, 570);
         context.stroke();
 
         context.font = '18px serif';
         context.fillStyle = "white";
         context.fillStyle = 'Red';
-        context.fillText("Night owl", 620, 50);
-        context.fillText('Go off alone and think', 620, 100);
-        context.fillText('Cut to the chase', 620, 150);
-        context.fillText('Need to move on', 620, 200);
-        context.fillText('Mental processor', 620, 250);
-        context.fillText('Interrupt me when you need me', 620, 300);
-        context.fillText('Slack/Text', 620, 350);
-        context.fillText('I have no set schedule', 620, 400);
-        context.fillText('Auditory learner', 620, 450);
-        context.fillText('Physical meeting', 620, 500);
-        context.fillText('Project Planning', 620, 550);
+        context.fillText("Night owl", 720, 70);
+        context.fillText('Go off alone and think', 720, 120);
+        context.fillText('Cut to the chase', 720, 170);
+        context.fillText('Need to move on', 720, 220);
+        context.fillText('Mental processor', 720, 270);
+        context.fillText('Interrupt me when you need me', 720, 320);
+        context.fillText('Slack/Text', 720, 370);
+        context.fillText('I have no set schedule', 720, 420);
+        context.fillText('Auditory learner', 720, 470);
+        context.fillText('Physical meeting', 720, 520);
+        context.fillText('Project Planning', 720, 570);
 
+        var X = 300 + 4*parseInt(result.EarlyNightOwl, 10);
+            var Y = 70;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 2;
+            context.strokeStyle = "black";
+            context.stroke();
+            context.closePath();
 
+            var X = 300+ 4*parseInt(result.TogetherOrAlone, 10);
+            var Y = 120;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
 
+            var X = 300+ 4*parseInt(result.TellOrCut, 10);
+            var Y = 170;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
 
+            var X = 300+ 4*parseInt(result.TalkOrMoveOn, 10);
+            var Y = 220;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
 
+            var X = 300+ 4*parseInt(result.VerbalOrMental, 10);
+            var Y = 270;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
 
+            var X = 300+ 4*parseInt(result.ScheduleOrInterrupt, 10);
+            var Y = 320;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
 
+            var X = 300+ 4*parseInt(result.VideoOrText, 10);
+            var Y = 370;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.HourOrNoSchedule, 10);
+            var Y = 420;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.VisualOrAuditory, 10);
+            var Y = 470;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.DigitalOrPhysical, 10);
+            var Y = 520;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.ProgrammingOrProject, 10);
+            var Y = 570;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "blue";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+        });
+
+        //Henny
+        fetch('https://bacit.info/hwr/20221117124845-cc50fbb7f4040736f827fe3c0a364adf.json')
+        .then(function (resp){
+            return resp.json();
+        })
+        .then (function (result){
+            console.log(result);
+
+        context.font = '24px serif';
+        context.fillStyle = '#9C27B0'
+        context.fillText(result.fname, 20, 16);
+       
+
+        var X = 300 + 4*parseInt(result.EarlyNightOwl, 10);
+            var Y = 70;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 2;
+            context.strokeStyle = "black";
+            context.stroke();
+            context.closePath();
+
+            var X = 300+ 4*parseInt(result.TogetherOrAlone, 10);
+            var Y = 120;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.TellOrCut, 10);
+            var Y = 170;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.TalkOrMoveOn, 10);
+            var Y = 220;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.VerbalOrMental, 10);
+            var Y = 270;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.ScheduleOrInterrupt, 10);
+            var Y = 320;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.VideoOrText, 10);
+            var Y = 370;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.HourOrNoSchedule, 10);
+            var Y = 420;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.VisualOrAuditory, 10);
+            var Y = 470;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.DigitalOrPhysical, 10);
+            var Y = 520;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+
+            var X = 300+ 4*parseInt(result.ProgrammingOrProject, 10);
+            var Y = 570;
+            var R = 10;
+            context.beginPath();
+            context.arc(X, Y, R, 0, 4*Math.PI, false);
+            context.fillStyle = "#9C27B0";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "black";
+            context.stroke();
+        });
 
         /*
                 const getData = async() => {
