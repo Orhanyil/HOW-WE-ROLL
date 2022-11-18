@@ -40,6 +40,7 @@
         //id=resultat
         let resultat = document.getElementById('resultat');
         let context = resultat.getContext('2d');
+        resultat.style.background = ('#24292e');
 
         
         //Form data
@@ -55,7 +56,7 @@
         context.fillStyle = 'blue'
         context.fillText(result.fname, 320, 16);
        
-        context.fillStyle = 'red';
+        context.fillStyle = '#fafbfc';
         context.fillText("Early bird", 20, 70);
         context.fillText('Work on together', 20, 120);
         context.fillText('Tell me the backstory', 20, 170);
@@ -108,8 +109,7 @@
         context.stroke();
 
         context.font = '24px serif';
-        context.fillStyle = "white";
-        context.fillStyle = 'Red';
+        context.fillStyle = '#fafbfc';
         context.fillText("Night owl", 720, 70);
         context.fillText('Go off alone and think', 720, 120);
         context.fillText('Cut to the chase', 720, 170);
