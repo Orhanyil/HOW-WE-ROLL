@@ -40,6 +40,7 @@
         //id=resultat
         let resultat = document.getElementById('resultat');
         let context = resultat.getContext('2d');
+        resultat.style.background = "#24292e";
 
         
         //Form data
@@ -52,10 +53,10 @@
             console.log(result);
 
         context.font = '24px serif';
-        context.fillStyle = 'blue'
-        context.fillText(result.fname, 320, 16);
+        context.fillStyle = 'blue';
+        context.fillText(result.fname, 200, 16);
        
-        context.fillStyle = 'red';
+        context.fillStyle = '#fafbfc';
         context.fillText("Early bird", 20, 70);
         context.fillText('Work on together', 20, 120);
         context.fillText('Tell me the backstory', 20, 170);
@@ -109,7 +110,6 @@
 
         context.font = '24px serif';
         context.fillStyle = "white";
-        context.fillStyle = 'Red';
         context.fillText("Night owl", 720, 70);
         context.fillText('Go off alone and think', 720, 120);
         context.fillText('Cut to the chase', 720, 170);
@@ -255,7 +255,7 @@
 
         context.font = '24px serif';
         context.fillStyle = '#9C27B0'
-        context.fillText(result.fname, 240, 16);
+        context.fillText(result.fname, 120, 16);
        
 
         var X = 300 + 4*parseInt(result.EarlyNightOwl, 10);
@@ -517,141 +517,6 @@
             context.stroke();
         });
 
-        //Benjamin
-        fetch('https://bacit.info/hwr/20221118084641-aa37d792cd68b6e0dc256a4dcabfe2a3.json')
-        .then(function (resp){
-            return resp.json();
-        })
-        .then (function (result){
-            console.log(result);
-
-        context.font = '24px serif';
-        context.fillStyle = '#FFAB00'
-        context.fillText(result.fname, 120, 16);
-       
-
-        var X = 300 + 4*parseInt(result.EarlyNightOwl, 10);
-            var Y = 70;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 2;
-            context.strokeStyle = "black";
-            context.stroke();
-            context.closePath();
-
-            var X = 300+ 4*parseInt(result.TogetherOrAlone, 10);
-            var Y = 120;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-
-            var X = 300+ 4*parseInt(result.TellOrCut, 10);
-            var Y = 170;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-
-            var X = 300+ 4*parseInt(result.TalkOrMoveOn, 10);
-            var Y = 220;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-
-            var X = 300+ 4*parseInt(result.VerbalOrMental, 10);
-            var Y = 270;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-
-            var X = 300+ 4*parseInt(result.ScheduleOrInterrupt, 10);
-            var Y = 320;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-
-            var X = 300+ 4*parseInt(result.VideoOrText, 10);
-            var Y = 370;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-
-            var X = 300+ 4*parseInt(result.HourOrNoSchedule, 10);
-            var Y = 420;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-
-            var X = 300+ 4*parseInt(result.VisualOrAuditory, 10);
-            var Y = 470;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-
-            var X = 300+ 4*parseInt(result.DigitalOrPhysical, 10);
-            var Y = 520;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-
-            var X = 300+ 4*parseInt(result.ProgrammingOrProject, 10);
-            var Y = 570;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-        });
         /*
                 const getData = async() => {
                     await fetch('https://bacit.info/hwr/20221109072557-0c5c01fc160602a674cfd99ae8f36939.json')
