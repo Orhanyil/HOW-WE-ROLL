@@ -116,12 +116,17 @@
 
 <script>
 // Hentet fra https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (07-11-2022)
-// Example POST method implementation using fetch:
+// Eksempel på implementering av POST-metode ved bruk av fetch:
 async function postData(url = "", data = {}) {
         // Default options are marked with *
         const response = await fetch(url, {
-          method: "POST", // *GET, POST, PUT, DELETE, etc.
-          mode: "cors", // no-cors, *cors, same-origin
+          method: "POST", /* *GET, POST, PUT, DELETE, etc. "method" definerer hvilken HTTP-metode som vil brukes ved innsending
+                           av skjemadata. Hvis  skjemadata skal sendes som URL-variabler (method="GET"), hvis det skal sendes 
+                          som HTTP-melding (method="POST"). Siden informasjonen som sendes med GET vises i URL-en, er 
+                          sikkerhetsrisikoen høy, men den er raskere enn POST-metoden. POST-metoden brukes for forespørsler som 
+                          vi ikke ønsker skal vises i URL-en.*/
+
+          mode: "cors", // no-cors, *cors, same-origin. "cors" tar kritiske sikkerhetstiltak for noen servere.
           cache: "no-cache", // *default, no-cache, reload, force-cache,only-if-cached
           credentials: "same-origin", // include, *same-origin, omit
           headers: {
