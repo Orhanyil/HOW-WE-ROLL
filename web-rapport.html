@@ -32,7 +32,7 @@
             <li> <a href="web-form.html">HWR Skjema</a> </li>
 
             <li> <a href="web-rapport.html">HWR Rapport</a> </li>
-            
+
             <li> <a href="https://orhanyil.github.io/Gruppe_12B/hjemside.html">Flaggoppgave</a></li>
         </ul>
     </nav>
@@ -49,754 +49,891 @@
         let context = resultat.getContext('2d');
         resultat.style.background = ('#24292e');
 
-        
+
         //Hentet fra https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (09-11-2022)
         //Orhan
         fetch('https://bacit.info/hwr/20221117113012-0ad792b8c001e96b44462ad64750edb7.json')
-        .then(function (resp){
-            return resp.json();
-        })
-        .then (function (result){
-            console.log(result);
+            .then(function (resp) {
+                return resp.json();
+            })
+            .then(function (result) {
+                console.log(result);
 
-        context.font = '24px serif'; //Her velger vi font.
-        context.fillStyle = 'blue' //Her velger vi teksts farge
-        context.fillText(result.fname, 620, 650); //Vi caller funksjon (result) her, og gir posisjon.
-       
-        context.fillStyle = '#fafbfc';
-        context.fillText("Early bird", 20, 70);
-        context.fillText('Work on together', 20, 120);
-        context.fillText('Tell me the backstory', 20, 170);
-        context.fillText('Need to talk it out', 20, 220);
-        context.fillText('Verbal processor', 20, 270);
-        context.fillText('Schedule a time to chat', 20, 320);
-        context.fillText('Video chat', 20, 370);
-        context.fillText('09-17 hours', 20, 420);
-        context.fillText('Visual learner', 20, 470);
-        context.fillText('Digital meeting', 20, 520);
-        context.fillText('Programming', 20, 570);
+                context.font = '24px serif'; //Her velger vi font.
+                context.fillStyle = '#007eff' //Her velger vi teksts farge, Farge kodene hentet fra https://www.w3schools.com/colors/colors_picker.asp
+                context.fillText(result.fname, 720, 650); //Vi caller funksjon (result) her, og gir posisjon.
 
-
+                context.fillStyle = '#fafbfc';
+                context.fillText("Early bird", 20, 70); //Her spesifiserer vi posisjonene til tekstene. 
+                context.fillText('Work on together', 20, 120);
+                context.fillText('Tell me the backstory', 20, 170);
+                context.fillText('Need to talk it out', 20, 220);
+                context.fillText('Verbal processor', 20, 270);
+                context.fillText('Schedule a time to chat', 20, 320);
+                context.fillText('Video chat', 20, 370);
+                context.fillText('09-17 hours', 20, 420);
+                context.fillText('Visual learner', 20, 470);
+                context.fillText('Digital meeting', 20, 520);
+                context.fillText('Programming', 20, 570);
 
 
-        //Vi tegner linjer ved å spesifisere deres posisjoner nedenfor.
-        context.beginPath();
-        context.moveTo(300, 70);
-        context.lineTo(700, 70);
 
-        context.moveTo(300, 120);
-        context.lineTo(700, 120);
 
-        context.moveTo(300, 170);
-        context.lineTo(700, 170);
+                //Vi tegner linjer ved å spesifisere deres posisjoner nedenfor.
+                context.beginPath();
+                context.moveTo(300, 70);
+                context.lineTo(700, 70);
 
-        context.moveTo(300, 220);
-        context.lineTo(700, 220);
+                context.moveTo(300, 120);
+                context.lineTo(700, 120);
 
-        context.moveTo(300, 270);
-        context.lineTo(700, 270);
+                context.moveTo(300, 170);
+                context.lineTo(700, 170);
 
-        context.moveTo(300, 320);
-        context.lineTo(700, 320);
+                context.moveTo(300, 220);
+                context.lineTo(700, 220);
 
-        context.moveTo(300, 370);
-        context.lineTo(700, 370);
+                context.moveTo(300, 270);
+                context.lineTo(700, 270);
 
-        context.moveTo(300, 420);
-        context.lineTo(700, 420);
+                context.moveTo(300, 320);
+                context.lineTo(700, 320);
 
-        context.moveTo(300, 470);
-        context.lineTo(700, 470);
+                context.moveTo(300, 370);
+                context.lineTo(700, 370);
 
-        context.moveTo(300, 520);
-        context.lineTo(700, 520);
+                context.moveTo(300, 420);
+                context.lineTo(700, 420);
 
-        context.moveTo(300, 570);
-        context.lineTo(700, 570);
-        context.stroke();
+                context.moveTo(300, 470);
+                context.lineTo(700, 470);
 
-        context.font = '24px serif';
-        context.fillStyle = '#fafbfc';
-        context.fillText("Night owl", 720, 70);
-        context.fillText('Go off alone and think', 720, 120);
-        context.fillText('Cut to the chase', 720, 170);
-        context.fillText('Need to move on', 720, 220);
-        context.fillText('Mental processor', 720, 270);
-        context.fillText('Interrupt me when you need me', 720, 320);
-        context.fillText('Slack/Text', 720, 370);
-        context.fillText('I have no set schedule', 720, 420);
-        context.fillText('Auditory learner', 720, 470);
-        context.fillText('Physical meeting', 720, 520);
-        context.fillText('Project Planning', 720, 570);
+                context.moveTo(300, 520);
+                context.lineTo(700, 520);
 
-        var X = 300 + 4*parseInt(result.EarlyNightOwl, 10); /* Mens verdien av skjema dataene vi sender er 100 enheter, 
+                context.moveTo(300, 570);
+                context.lineTo(700, 570);
+                context.stroke();
+
+                context.font = '24px serif';
+                context.fillStyle = '#fafbfc';
+                context.fillText("Night owl", 720, 70);
+                context.fillText('Go off alone and think', 720, 120);
+                context.fillText('Cut to the chase', 720, 170);
+                context.fillText('Need to move on', 720, 220);
+                context.fillText('Mental processor', 720, 270);
+                context.fillText('Interrupt me when you need me', 720, 320);
+                context.fillText('Slack/Text', 720, 370);
+                context.fillText('I have no set schedule', 720, 420);
+                context.fillText('Auditory learner', 720, 470);
+                context.fillText('Physical meeting', 720, 520);
+                context.fillText('Project Planning', 720, 570);
+
+                var X = 300 + 4 * parseInt(result.EarlyNightOwl, 10); /* Mens verdien av skjema dataene vi sender er 100 enheter, 
                                                                er linjene vi tegner 400 enheter. Det er derfor vi multipliserer
                                                                de innkommende dataene med 4.*/
-            var Y = 70;
-            var R = 10; // R betyr diameter.
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);//
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 2;
-            context.strokeStyle = "black";
-            context.stroke();
-            context.closePath();
+                var Y = 70;
+                var R = 10; // R betyr diameter.
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);//
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
 
-            var X = 300+ 4*parseInt(result.TogetherOrAlone, 10);
-            var Y = 120;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TogetherOrAlone, 10);
+                var Y = 120;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.TellOrCut, 10);
-            var Y = 170;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TellOrCut, 10);
+                var Y = 170;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.TalkOrMoveOn, 10);
-            var Y = 220;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TalkOrMoveOn, 10);
+                var Y = 220;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VerbalOrMental, 10);
-            var Y = 270;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VerbalOrMental, 10);
+                var Y = 270;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.ScheduleOrInterrupt, 10);
-            var Y = 320;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.ScheduleOrInterrupt, 10);
+                var Y = 320;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VideoOrText, 10);
-            var Y = 370;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VideoOrText, 10);
+                var Y = 370;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.HourOrNoSchedule, 10);
-            var Y = 420;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.HourOrNoSchedule, 10);
+                var Y = 420;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VisualOrAuditory, 10);
-            var Y = 470;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VisualOrAuditory, 10);
+                var Y = 470;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.DigitalOrPhysical, 10);
-            var Y = 520;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.DigitalOrPhysical, 10);
+                var Y = 520;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.ProgrammingOrProject, 10);
-            var Y = 570;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "blue";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-        });
+                var X = 300 + 4 * parseInt(result.ProgrammingOrProject, 10);
+                var Y = 570;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#007eff";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+            });
 
         //Henny
         fetch('https://bacit.info/hwr/20221117124845-cc50fbb7f4040736f827fe3c0a364adf.json')
-        .then(function (resp){
-            return resp.json();
-        })
-        .then (function (result){
-            console.log(result);
+            .then(function (resp) {
+                return resp.json();
+            })
+            .then(function (result) {
+                console.log(result);
 
-        context.font = '24px serif';
-        context.fillStyle = '#9C27B0'
-        context.fillText(result.fname, 340, 650);
-       
+                context.font = '24px serif';
+                context.fillStyle = '#9C27B0'
+                context.fillText(result.fname, 340, 650);
 
-        var X = 300 + 4*parseInt(result.EarlyNightOwl, 10);
-            var Y = 70;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 2;
-            context.strokeStyle = "black";
-            context.stroke();
-            context.closePath();
 
-            var X = 300+ 4*parseInt(result.TogetherOrAlone, 10);
-            var Y = 120;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.EarlyNightOwl, 10);
+                var Y = 70;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
 
-            var X = 300+ 4*parseInt(result.TellOrCut, 10);
-            var Y = 170;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TogetherOrAlone, 10);
+                var Y = 120;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.TalkOrMoveOn, 10);
-            var Y = 220;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TellOrCut, 10);
+                var Y = 170;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VerbalOrMental, 10);
-            var Y = 270;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TalkOrMoveOn, 10);
+                var Y = 220;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.ScheduleOrInterrupt, 10);
-            var Y = 320;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VerbalOrMental, 10);
+                var Y = 270;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VideoOrText, 10);
-            var Y = 370;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.ScheduleOrInterrupt, 10);
+                var Y = 320;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.HourOrNoSchedule, 10);
-            var Y = 420;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VideoOrText, 10);
+                var Y = 370;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VisualOrAuditory, 10);
-            var Y = 470;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.HourOrNoSchedule, 10);
+                var Y = 420;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.DigitalOrPhysical, 10);
-            var Y = 520;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VisualOrAuditory, 10);
+                var Y = 470;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.ProgrammingOrProject, 10);
-            var Y = 570;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#9C27B0";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-        });
+                var X = 300 + 4 * parseInt(result.DigitalOrPhysical, 10);
+                var Y = 520;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.ProgrammingOrProject, 10);
+                var Y = 570;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#9C27B0";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+            });
 
         //Annette
         fetch('https://bacit.info/hwr/20221117141843-2db06e7b4f62cd28d8f1e9a406d81ce3.json')
-        .then(function (resp){
-            return resp.json();
-        })
-        .then (function (result){
-            console.log(result);
+            .then(function (resp) {
+                return resp.json();
+            })
+            .then(function (result) {
+                console.log(result);
 
-        context.font = '24px serif';
-        context.fillStyle = '#1B5E20'
-        context.fillText(result.fname, 120, 650);
-       
+                context.font = '24px serif';
+                context.fillStyle = '#1B5E20'
+                context.fillText(result.fname, 120, 650);
 
-        var X = 300 + 4*parseInt(result.EarlyNightOwl, 10);
-            var Y = 70;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 2;
-            context.strokeStyle = "black";
-            context.stroke();
-            context.closePath();
 
-            var X = 300+ 4*parseInt(result.TogetherOrAlone, 10);
-            var Y = 120;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.EarlyNightOwl, 10);
+                var Y = 70;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
 
-            var X = 300+ 4*parseInt(result.TellOrCut, 10);
-            var Y = 170;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TogetherOrAlone, 10);
+                var Y = 120;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.TalkOrMoveOn, 10);
-            var Y = 220;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TellOrCut, 10);
+                var Y = 170;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VerbalOrMental, 10);
-            var Y = 270;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TalkOrMoveOn, 10);
+                var Y = 220;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.ScheduleOrInterrupt, 10);
-            var Y = 320;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VerbalOrMental, 10);
+                var Y = 270;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VideoOrText, 10);
-            var Y = 370;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.ScheduleOrInterrupt, 10);
+                var Y = 320;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.HourOrNoSchedule, 10);
-            var Y = 420;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VideoOrText, 10);
+                var Y = 370;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VisualOrAuditory, 10);
-            var Y = 470;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.HourOrNoSchedule, 10);
+                var Y = 420;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.DigitalOrPhysical, 10);
-            var Y = 520;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VisualOrAuditory, 10);
+                var Y = 470;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.ProgrammingOrProject, 10);
-            var Y = 570;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#1B5E20";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-        });
+                var X = 300 + 4 * parseInt(result.DigitalOrPhysical, 10);
+                var Y = 520;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.ProgrammingOrProject, 10);
+                var Y = 570;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#1B5E20";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+            });
 
         //Benjamin
         fetch('https://bacit.info/hwr/20221118084641-aa37d792cd68b6e0dc256a4dcabfe2a3.json')
-        .then(function (resp){
-            return resp.json();
-        })
-        .then (function (result){
-            console.log(result);
+            .then(function (resp) {
+                return resp.json();
+            })
+            .then(function (result) {
+                console.log(result);
 
-        context.font = '24px serif';
-        context.fillStyle = '#FFAB00'
-        context.fillText(result.fname, 220, 650);
-       
+                context.font = '24px serif';
+                context.fillStyle = '#FFAB00'
+                context.fillText(result.fname, 220, 650);
 
-        var X = 300 + 4*parseInt(result.EarlyNightOwl, 10);
-            var Y = 70;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 2;
-            context.strokeStyle = "black";
-            context.stroke();
-            context.closePath();
 
-            var X = 300+ 4*parseInt(result.TogetherOrAlone, 10);
-            var Y = 120;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.EarlyNightOwl, 10);
+                var Y = 70;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
 
-            var X = 300+ 4*parseInt(result.TellOrCut, 10);
-            var Y = 170;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TogetherOrAlone, 10);
+                var Y = 120;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.TalkOrMoveOn, 10);
-            var Y = 220;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TellOrCut, 10);
+                var Y = 170;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VerbalOrMental, 10);
-            var Y = 270;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TalkOrMoveOn, 10);
+                var Y = 220;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.ScheduleOrInterrupt, 10);
-            var Y = 320;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VerbalOrMental, 10);
+                var Y = 270;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VideoOrText, 10);
-            var Y = 370;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.ScheduleOrInterrupt, 10);
+                var Y = 320;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.HourOrNoSchedule, 10);
-            var Y = 420;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VideoOrText, 10);
+                var Y = 370;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VisualOrAuditory, 10);
-            var Y = 470;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.HourOrNoSchedule, 10);
+                var Y = 420;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.DigitalOrPhysical, 10);
-            var Y = 520;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VisualOrAuditory, 10);
+                var Y = 470;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.ProgrammingOrProject, 10);
-            var Y = 570;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#FFAB00";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-        });
+                var X = 300 + 4 * parseInt(result.DigitalOrPhysical, 10);
+                var Y = 520;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.ProgrammingOrProject, 10);
+                var Y = 570;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#FFAB00";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+            });
 
         //Martin
         fetch('https://bacit.info/hwr/20221118095559-07121c1f46180d23aa9583488b1fa09e.json')
-        .then(function (resp){
-            return resp.json();
-        })
-        .then (function (result){
-            console.log(result);
+            .then(function (resp) {
+                return resp.json();
+            })
+            .then(function (result) {
+                console.log(result);
 
-        context.font = '24px serif';
-        context.fillStyle = '#84FFFF'
-        context.fillText(result.fname, 520, 650);
-       
+                context.font = '24px serif';
+                context.fillStyle = '#84FFFF'
+                context.fillText(result.fname, 520, 650);
 
-        var X = 300 + 4*parseInt(result.EarlyNightOwl, 10);
-            var Y = 70;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 2;
-            context.strokeStyle = "black";
-            context.stroke();
-            context.closePath();
 
-            var X = 300+ 4*parseInt(result.TogetherOrAlone, 10);
-            var Y = 120;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.EarlyNightOwl, 10);
+                var Y = 70;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
 
-            var X = 300+ 4*parseInt(result.TellOrCut, 10);
-            var Y = 170;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TogetherOrAlone, 10);
+                var Y = 120;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.TalkOrMoveOn, 10);
-            var Y = 220;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TellOrCut, 10);
+                var Y = 170;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VerbalOrMental, 10);
-            var Y = 270;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.TalkOrMoveOn, 10);
+                var Y = 220;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.ScheduleOrInterrupt, 10);
-            var Y = 320;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VerbalOrMental, 10);
+                var Y = 270;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VideoOrText, 10);
-            var Y = 370;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.ScheduleOrInterrupt, 10);
+                var Y = 320;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.HourOrNoSchedule, 10);
-            var Y = 420;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VideoOrText, 10);
+                var Y = 370;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.VisualOrAuditory, 10);
-            var Y = 470;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.HourOrNoSchedule, 10);
+                var Y = 420;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.DigitalOrPhysical, 10);
-            var Y = 520;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
+                var X = 300 + 4 * parseInt(result.VisualOrAuditory, 10);
+                var Y = 470;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
 
-            var X = 300+ 4*parseInt(result.ProgrammingOrProject, 10);
-            var Y = 570;
-            var R = 10;
-            context.beginPath();
-            context.arc(X, Y, R, 0, 4*Math.PI, false);
-            context.fillStyle = "#84FFFF";
-            context.fill();
-            context.lineWidth = 1;
-            context.strokeStyle = "black";
-            context.stroke();
-        });
+                var X = 300 + 4 * parseInt(result.DigitalOrPhysical, 10);
+                var Y = 520;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.ProgrammingOrProject, 10);
+                var Y = 570;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#84FFFF";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+            });
+
+        //Mathias
+        fetch('https://bacit.info/hwr/20221123112629-1cc49c0d0b919a5bd2a72f62e745fdfe.json')
+            .then(function (resp) {
+                return resp.json();
+            })
+            .then(function (result) {
+                console.log(result);
+
+                context.font = '24px serif';
+                context.fillStyle = '#ff6770'
+                context.fillText(result.fname, 620, 650);
+
+
+                var X = 300 + 4 * parseInt(result.EarlyNightOwl, 10);
+                var Y = 70;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
+
+                var X = 300 + 4 * parseInt(result.TogetherOrAlone, 10);
+                var Y = 120;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.TellOrCut, 10);
+                var Y = 170;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.TalkOrMoveOn, 10);
+                var Y = 220;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.VerbalOrMental, 10);
+                var Y = 270;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.ScheduleOrInterrupt, 10);
+                var Y = 320;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.VideoOrText, 10);
+                var Y = 370;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.HourOrNoSchedule, 10);
+                var Y = 420;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.VisualOrAuditory, 10);
+                var Y = 470;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.DigitalOrPhysical, 10);
+                var Y = 520;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+
+                var X = 300 + 4 * parseInt(result.ProgrammingOrProject, 10);
+                var Y = 570;
+                var R = 10;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);
+                context.fillStyle = "#ff6770";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+            });
+
         /*
                 const getData = async() => {
                     await fetch('https://bacit.info/hwr/20221109072557-0c5c01fc160602a674cfd99ae8f36939.json')
