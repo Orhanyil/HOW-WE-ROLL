@@ -9,7 +9,8 @@
     <title>Rapport - How We Roll</title>
     <style>
         body {
-            background-image: url('bilder/uiaCampus.jpg'); /*hentet 23.11.2022 fra https://www.reftec.no/b/945/uia-kristiansand*/
+            background-image: url('bilder/uiaCampus.jpg');
+            /*hentet 23.11.2022 fra https://www.reftec.no/b/945/uia-kristiansand*/
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -61,7 +62,7 @@
 
                 context.font = '24px serif'; //Her velger vi font.
                 context.fillStyle = '#007eff' //Her velger vi teksts farge, Farge kodene hentet fra https://www.w3schools.com/colors/colors_picker.asp
-                context.fillText(result.fname, 720, 650); //Vi caller funksjon (result) her, og gir posisjon.
+                context.fillText(result.fname, 720, 650); //Vi kaller fname med fonkjon(result) her, og gir posisjon.
 
                 context.fillStyle = '#fafbfc';
                 context.fillText("Early bird", 20, 70); //Her spesifiserer vi posisjonene til tekstene. 
@@ -134,14 +135,14 @@
                                                                de innkommende dataene med 4.*/
                 var Y = 70;
                 var R = 10; // R betyr diameter.
-                context.beginPath();
-                context.arc(X, Y, R, 0, 4 * Math.PI, false);//
-                context.fillStyle = "#007eff";
-                context.fill();
-                context.lineWidth = 2;
-                context.strokeStyle = "black";
-                context.stroke();
-                context.closePath();
+                context.beginPath(); //Her starter vi en ny vei. Så vi kan lage forskjellige linjer.
+                context.arc(X, Y, R, 0, 4 * Math.PI, false);// En sirkel lages.
+                context.fillStyle = "#007eff"; //Her velger vi teksts farge, Farge kodene hentet fra https://www.w3schools.com/colors/colors_picker.asp
+                context.fill();//Den fyller innsiden av objektet vi tegner.
+                context.lineWidth = 2; //linje bredde
+                context.strokeStyle = "black"; //linje farge
+                context.stroke();//for å tegne strokene
+                context.closePath();// tegner en linje i nedre venstre hjørne.
 
                 var X = 300 + 4 * parseInt(result.TogetherOrAlone, 10);
                 var Y = 120;
@@ -934,48 +935,6 @@
                 context.stroke();
             });
 
-        /*
-                const getData = async() => {
-                    await fetch('https://bacit.info/hwr/20221109072557-0c5c01fc160602a674cfd99ae8f36939.json')
-                        .then(response => console.log(response))
-                        .catch(response => console.log(response));
-                }
-        */
-
-        /*
-            //person 2
-            fetch('https://bacit.info/hwr/JSON.FIL')
-            .then(response => response.json())
-            .then(data => console.log(data));
-        
-        
-        
-            //person 3
-            fetch('https://bacit.info/hwr/JSON.FIL')
-            .then(response => response.json())
-            .then(data => console.log(data));
-        
-        
-        
-            //person 4
-            fetch('https://bacit.info/hwr/JSON.FIL')
-            .then(response => response.json())
-            .then(data => console.log(data));
-        
-        
-        
-            //person 5
-            fetch('https://bacit.info/hwr/JSON.FIL')
-            .then(response => response.json())
-            .then(data => console.log(data));
-        
-        
-            
-            //person 6
-            fetch('https://bacit.info/hwr/JSON.FIL')
-            .then(response => response.json())
-            .then(data => console.log(data));
-        */
 
 
     </script>
