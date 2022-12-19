@@ -139,11 +139,11 @@ async function postData(url = "", data = {}) {
         });
         return response.json(); // parses JSON response into native JavaScriptobjects
       }
-
+      //hentet fra https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event
       function formData(event) {
         event.preventDefault();
         const data = new FormData(event.target);
-        const formJSON = Object.fromEntries(data.entries());
+        const formJSON = Object.fromEntries(data.entries()); 
         const results = document.querySelector(".results pre");
         postData("https://bacit.info/", formJSON).then((data) => {
           results.innerText = JSON.stringify(data, null, 2);
