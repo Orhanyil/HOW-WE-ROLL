@@ -116,7 +116,7 @@ nav { /* Navigation box */
 .card1, .card2, .card3, .card4, .card5, .card6{
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: 0.8s;
     text-align: center;
     width: 350px;
     height: 200px;
@@ -171,7 +171,7 @@ nav { /* Navigation box */
 }
 
 /* On mouse-over, add a deeper shadow*/
-.card:hover {
+.cards:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
